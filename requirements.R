@@ -1,4 +1,11 @@
 library(remotes)
+library(magrittr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(glue)
+library(stringdist)
+library(fuzzyjoin)
 
 ##### Install specific package versions from CRAN #####
 
@@ -33,3 +40,12 @@ download_data <- function(x) {
 # download_data(
 #   "https://assets.datacamp.com/production/repositories/19/datasets/27a2a8587eff17add54f4ba288e770e235ea3325/coffee.csv"
 # )
+download_data(
+  "https://assets.datacamp.com/production/repositories/5210/datasets/5536794469e26b7b9a4f1a6104f7315f18f6b97e/movie_db.csv"
+)
+download_data(
+  "https://assets.datacamp.com/production/repositories/5210/datasets/4a6355eb7cd4c5b5e760d5685bf81db114619d6d/names.csv"
+)
+download_data(
+  "https://assets.datacamp.com/production/repositories/5210/datasets/4dd827f39a836ea76f23750d325b78afc36a9669/ocr_titles.csv"
+)
